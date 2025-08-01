@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+float c_to_f(int c) {
+	return (9.0/5.0 * c) + 32.0;
+} 
+
 int main() {
 	float celsius;
 	float lower, upper, step;
@@ -11,7 +15,7 @@ int main() {
 	celsius = lower;
 	printf("Celsius Fahrenheit\n");
 	for (celsius = upper; celsius > lower; celsius -= step) {
-		printf("%7.0f %10.1f\n", celsius, (9.0/5.0 * celsius) + 32.0);
+		printf("%7.0f %10.1f\n", celsius, c_to_f(celsius));
 	}
 	return 0;
 }
